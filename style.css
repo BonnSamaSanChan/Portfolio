@@ -1,0 +1,228 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url("umamusumebackground.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navbar */
+header {
+  background: #111;
+  padding: 20px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff66b2;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff66b2;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 60px;
+  min-height: 100vh;
+}
+
+.hero-text {
+  max-width: 50%;
+  background: rgba(0, 0, 0, 0.6); /* 🔹 dark box */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.hero-text h1 span {
+  color: #ff66b2;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: #ff66b2;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #ff338a;
+}
+
+.btn.secondary {
+  border: 2px solid #ff66b2;
+  color: #ff66b2;
+}
+
+.btn.secondary:hover {
+  background: #ff66b2;
+  color: #fff;
+}
+
+/* Hero Image with pink rectangle */
+.hero-img {
+  position: relative;
+  width: 320px;
+  height: 420px;
+}
+
+.hero-img img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.hero-img .image-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #ff66b2; /* hollow rectangle */
+  border-radius: 10px;       /* match image corners */
+  z-index: 1;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 60px;
+  gap: 50px;
+}
+
+.about-left {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.6); /* 🔹 dark box */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.about-left h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff66b2;
+}
+
+.about-left p {
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+}
+
+.stats div h3 {
+  font-size: 2rem;
+  color: #ff66b2;
+}
+
+.stats div p {
+  color: #aaa;
+}
+
+.about-right {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.6); /* 🔹 dark box */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.about-right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-right li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.about-right img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  margin-top: 40px;
+  color: #aaa;
+}

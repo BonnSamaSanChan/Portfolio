@@ -7,7 +7,7 @@
 }
 
 body {
-  background: url("umamusumebackground.jpg") no-repeat center center fixed;
+  background: url("bg_bridge.png") no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   line-height: 1.6;
@@ -69,7 +69,7 @@ nav ul li a:hover {
 
 .hero-text {
   max-width: 50%;
-  background: rgba(0, 0, 0, 0.6); /* 🔹 dark box */
+  background: rgba(0, 0, 0, 0.6); /* dark box */
   padding: 20px;
   border-radius: 10px;
 }
@@ -162,7 +162,7 @@ nav ul li a:hover {
 
 .about-left {
   flex: 1;
-  background: rgba(0, 0, 0, 0.6); /* 🔹 dark box */
+  background: rgba(0, 0, 0, 0.6); /* dark box */
   padding: 30px;
   border-radius: 10px;
 }
@@ -194,7 +194,7 @@ nav ul li a:hover {
 
 .about-right {
   flex: 1;
-  background: rgba(0, 0, 0, 0.6); /* 🔹 dark box */
+  background: rgba(0, 0, 0, 0.6); /* dark box */
   padding: 30px;
   border-radius: 10px;
 }

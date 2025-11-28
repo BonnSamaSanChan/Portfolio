@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head> 
+<body>
+  <header class="top-bar">
+    <img src="Gehenna.png" alt="Logo" class="logo" />
+    <h1>Bonn Jouie C. Sasana</h1>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="sidebar-image">
+        <img src="Bonn.jpg" alt="Profile Image or Logo" />
+      </div>
+      <h2 class="sidebar-title"></h2>
+      <ul>
+        <li><a href="#profile" class="nav-link">Profile</a></li>
+        <li><a href="#expertise" class="nav-link">Expertise</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#extras" class="nav-link">Notes</a></li>
+      </ul>
+      <div class="contact-block">
+        <p class="contact-title">Contact Me</p>
+        <div class="contact-icons">
+          <a href="https://www.facebook.com/ImAKaltsitSimp" class="contact-icon" target="_blank" data-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/aris_gaming_aris_gaming/" class="contact-icon" target="_blank" data-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://github.com/BonnSamaSanChan" class="contact-icon" target="_blank" data-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <section id="profile" class="section">
+        <h2>Overview</h2>
+        <p>A college student studying Computer Science in West Visayas State University.</p>
+        <div class="card">
+          <h3>Profile</h3>
+          <ul>
+            <li><strong>Age:</strong> 21</li>
+            <li><strong>Address:</strong> Villa Arevalo Iloilo City</li>
+            <li><strong>School:</strong> West Visayas State University </li>
+            <li><strong>Course:</strong> Bachelor of Science in Computer Science </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="expertise" class="section">
+        <h2>Expertise</h2>
+        <div class="expertise-bar">
+          <span>HTML &amp; CSS</span>
+          <div class="bar">
+            <div class="fill" style="width: 85%;"></div>
+          </div>
+        </div>
+        <div class="expertise-bar">
+          <span>JavaScript</span>
+          <div class="bar">
+            <div class="fill" style="width: 70%;"></div>
+          </div>
+        </div>
+        <div class="expertise-bar">
+          <span>Creative Writing</span>
+          <div class="bar">
+            <div class="fill" style="width: 95%;"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <article class="projects-card">
+            <div class="project-img-wrapper">
+              <img src="Sakuya.png" alt="Sakuya Izayoi" class="project-img" />
+            </div>
+            <div class="project-info">
+              <h3><a href="https://github.com/BonnSamaSanChan/SakuyaIzayoi.git" class="Sakuya">Sakuya Izayoi</a></h3>
+              <p>A personal introduction to Sakuya Izayoi from Touhou Project.</p>
+            </div>
+          </article>
+
+          <article class="projects-card">
+            <div class="project-img-wrapper">
+              <img src="Blue_Archive_logo_JP.png" alt="Blue Archive" class="project-img" />
+            </div>
+            <div class="project-info">
+              <h3><a href="https://github.com/BonnSamaSanChan/BlueArchiveSchool.git" class="Buru Arkaibu">Blue Archive Filter</a></h3>
+              <p>A personal project of making and working with filters</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="extras" class="section">
+        <h2>Notes</h2>
+        <p>Will add more content as I continue to learn and grow.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll("main.section, main .section, section[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    const sectionMap = {};
+    sections.forEach(section => {
+      sectionMap[section.id] = section;
+    });
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navLinks.forEach(link => {
+              link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+            });
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.4
+      }
+    );
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
